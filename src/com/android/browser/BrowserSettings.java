@@ -265,7 +265,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         settings.setSavePassword(rememberPasswords());
         settings.setSaveFormData(saveFormdata());
         settings.setUseWideViewPort(isWideViewport());
-        settings.setWebSocketsEnabled(isWebSocketsEnabled());
 
         String ua = mCustomUserAgents.get(settings);
         if (ua != null) {
@@ -306,19 +305,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         // origin policy for file access
         settings.setAllowUniversalAccessFromFileURLs(false);
         settings.setAllowFileAccessFromFileURLs(false);
-
-        if (!(settings instanceof WebSettingsClassic)) return;
-
-        WebSettingsClassic settingsClassic = (WebSettingsClassic) settings;
-        settingsClassic.setPageCacheCapacity(getPageCacheCapacity());
-        // WebView should be preserving the memory as much as possible.
-        // However, apps like browser wish to turn on the performance mode which
-        // would require more memory.
-        // TODO: We need to dynamically allocate/deallocate temporary memory for
-        // apps which are trying to use minimal memory. Currently, double
-        // buffering is always turned on, which is unnecessary.
-        settingsClassic.setProperty(WebViewProperties.gfxUseMinimalMemory, "false");
-        settingsClassic.setWorkersEnabled(true);  // This only affects V8.
     }
 
     private void syncSharedSettings() {
@@ -351,6 +337,10 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         syncManagedSettings();
         if (PREF_SEARCH_ENGINE.equals(key)) {
             updateSearchEngine(false);
+        } else if (PREF_FULLSCREEN.equals(key)) {
+            if (mController != null && mController.getUi() != null) {
+                mController.getUi().setFullscreen(useFullscreen());
+            }
         } else if (PREF_ENABLE_QUICK_CONTROLS.equals(key)) {
             if (mController != null && mController.getUi() != null) {
                 mController.getUi().setUseQuickControls(sharedPreferences.getBoolean(key, false));
@@ -792,6 +782,10 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         return HomeProvider.MOST_VISITED.equals(getHomePage());
     }
 
+    public boolean useFullscreen() {
+        return mPrefs.getBoolean(PREF_FULLSCREEN, false);
+    }
+
     public boolean useInvertedRendering() {
         return mPrefs.getBoolean(PREF_INVERTED, false);
     }
@@ -803,6 +797,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     public boolean isWebSocketsEnabled() {
         return mPrefs.getBoolean(PREF_ENABLE_WEBSOCKETS, false);
     }
+
 
     // -----------------------------
     // getter/setters for privacy_security_preferences.xml
