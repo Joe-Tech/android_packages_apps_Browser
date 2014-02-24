@@ -777,32 +777,16 @@
     <string-array name="bookmarks" translatable="false">
         <item>Google</item>
         <item>http://www.google.com/</item>
-        <item>Picasa</item>
-        <item>http://picasaweb.google.com/</item>
-        <item>Yahoo!</item>
-        <item>http://www.yahoo.com/</item>
-        <item>MSN</item>
-        <item>http://www.msn.com/</item>
-        <item>Twitter</item>
-        <item>http://twitter.com/</item>
-        <item>Facebook</item>
-        <item>http://www.facebook.com/</item>
-        <item>Wikipedia</item>
-        <item>http://www.wikipedia.org/</item>
-        <item>eBay</item>
-        <item>http://www.ebay.com/</item>
-        <item>CNN</item>
-        <item>http://www.cnn.com/</item>
-        <item>NY Times</item>
-        <item>http://www.nytimes.com/</item>
-        <item>ESPN</item>
-        <item>http://espn.com/</item>
-        <item>Amazon</item>
-        <item>http://www.amazon.com/</item>
         <item>Weather Channel</item>
         <item>http://www.weather.com/</item>
-        <item>BBC</item>
-        <item>http://www.bbc.co.uk/</item>
+        <item>LiquidSmooth Github</item>
+        <item>http://github.com/LiquidSmooth</item>
+        <item>LiquidSmooth Downloads</item>
+        <item>http://www.drdevs.com/devs/teamliquid/</item>
+        <item>LiquidSmooth G+</item>
+        <item>http://plus.google.com/communities/117452480298315341829/stream/edf3b29f-e010-4ef3-8ef2-537344f67866?partnerid=gplp0</item>
+        <item>LiquidSmooth Facebook</item>
+        <item>http://www.facebook.com/liquidsmoothroms</item>
     </string-array>
 
     <!-- Bookmark name for Picasa website -->
