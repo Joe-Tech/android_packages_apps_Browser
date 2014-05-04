@@ -15,6 +15,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- The default homepage. -->
     <string name="homepage_base" translatable="false">http://www.liquidsmooth.net</string>
 
@@ -33,26 +34,20 @@
     <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_homescreen">Home screen</string>
 
-    <!-- User agent label -->
-    <string name="pref_content_ua">User agent</string>
-    <!-- User agent summary -->
-    <string name="pref_content_ua_summary">Choose a user agent</string>
-    <!-- User agent choices -->
-    <string-array name="pref_content_ua_choices" translatable="false">
-        <item>Android</item>
-        <item>Desktop</item>
-        <item>iPhone</item>
-        <item>iPad</item>
-        <item>Froyo-N1</item>
-        <item>Honeycomb-Xoom</item>
-    </string-array>
-    <string-array name="pref_content_ua_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-    </string-array>
+    <!-- Browser security/privacy anti-tracking label -->
+    <string name="pref_security_site_whitelist_cookies">Reduce tracking. Frequently delete cookies</string>
+    <!-- Browser security/privacy anti-tracking options -->
+    <string name="pref_security_site_whitelist_cookies_never">Never delete</string>
+    <string name="pref_security_site_whitelist_cookies_only">Delete from  all sites that aren\'t in my whitelist</string>
+    <string name="pref_security_site_whitelist_cookies_and_data">Also delete all localstorage databases</string>
+    <!-- Browser security/privacy anti-tracking verbose checkbox label -->
+    <string name="pref_security_site_whitelist_cookies_verbose">Cookie count</string>
+    <!-- Browser security/privacy anti-tracking verbose checkbox summary -->
+    <string name="pref_security_site_whitelist_cookies_verbose_summary">Show the number of deleted and remaining cookies</string>
+    <!-- Browser popup menu checkbox that allows the user to whitelist cookies from this site [CHAR LIMIT=50] -->
+    <string name="site_cookies_whitelisted">Keep site\'s cookies</string>
+    <!-- Toast to inform the user of the number of cookies deleted and remaining [CHAR LIMIT=50] -->
+    <string name="cookies_deleted_info">cookies deleted</string>
+    <string name="cookies_remain_info">cookies remain</string>
 
 </resources>
