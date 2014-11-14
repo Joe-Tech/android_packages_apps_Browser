@@ -32,5 +32,5 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:text="@string/loading_video" android:textSize="14sp"
-           android:textColor="?android:attr/textColorPrimary" />
+           android:textColor="@android:color/holo_blue_dark" />
  </LinearLayout>

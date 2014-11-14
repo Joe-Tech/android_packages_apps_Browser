@@ -59,7 +59,7 @@
             android:layout_below="@android:id/title"
             android:layout_alignLeft="@android:id/title"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary"
+            android:textColor="@android:color/holo_blue_dark"
             android:maxLines="4" />
 
         <!-- Preference should place its actual preference widget here. -->

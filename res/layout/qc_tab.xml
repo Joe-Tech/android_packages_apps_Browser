@@ -33,7 +33,7 @@
         android:ellipsize="marquee"
         android:typeface="sans"
         android:textSize="12sp"
-        android:textColor="#DDDDDD"
+        android:textColor="@android:color/holo_blue_dark"
         />
     <ImageView
         android:id="@+id/thumb"

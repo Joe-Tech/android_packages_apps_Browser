@@ -51,7 +51,7 @@
         android:paddingLeft="8dip"
         android:paddingRight="8dip"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_blue_dark"
         android:gravity="center_vertical"
         android:scrollHorizontally="true"
         android:lines="1"

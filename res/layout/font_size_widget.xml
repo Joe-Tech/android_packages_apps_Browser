@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:minWidth="50sp"
     android:textAppearance="?android:attr/textAppearanceSmall"
-    android:textColor="?android:attr/textColorSecondary"
+    android:textColor="@android:color/holo_blue_dark"
     android:layout_gravity="center_vertical"
 />
 
